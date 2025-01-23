@@ -50,7 +50,7 @@ To perform detection on a static image:
 python detect_image.py --source path/to/image.jpg
 ```
 
-### 4. Model Weights
+### 3. Model Weights
 Ensure the YOLO11n fine-tuned weights (`yolo11n.pt`) are placed in the project directory.
 
 ## Dataset Description
