@@ -11,6 +11,7 @@ This project demonstrates fine-tuning a YOLO11n model for detecting smoking-rela
 - **Augmentations**:
     - Rotation
     - Noise
+    - Blur
 - **Model**: YOLO11n (fine-tuned)
 - **Training Configuration**:
     - **Optimizer**: AdamW
@@ -28,21 +29,21 @@ pip install -r requirements.txt
 
 ## How to Use the Model
 
-### 1. Run on a Webcam
-To use the model for real-time detection with a webcam:
+### 1. Run on a Webcam or a video
+To use the model for real-time detection with a webcam or video, follow these steps:
+
+1. Open the .env file and set the VIDEO_SOURCE variable:
+
+    If you want to use a webcam, specify its index (e.g., 0 or 1).
+    If you want to use a video file, provide the path to the file.
+2. Once VIDEO_SOURCE is set, run the following command:
 
 ```bash
-python detect_webcam.py
+python smocker_detection.py
 ```
 
-### 2. Run on a Video File
-To use the model on a pre-recorded video:
 
-```bash
-python detect_video.py --source path/to/video.mp4
-```
-
-### 3. Run on an Image
+### 2. Run on an Image
 To perform detection on a static image:
 
 ```bash
@@ -71,9 +72,8 @@ The "Smoking" dataset was provided by Roboflow and includes two classes:
 ## Files in the Repository
 - **`requirements.txt`**: List of dependencies required to run the project.
 - **`detect_webcam.py`**: Code for real-time object detection using a webcam.
-- **`detect_video.py`**: Code for object detection on video files.
 - **`detect_image.py`**: Code for object detection on static images.
-- **`yolo11n.pt`**: Fine-tuned YOLO11n model weights (ensure this file is in the directory).
+- **`best.pt`**: Fine-tuned YOLO11n model weights.
 
 
 
