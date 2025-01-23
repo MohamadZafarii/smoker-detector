@@ -71,7 +71,7 @@ The "Smoking" dataset was provided by Roboflow and includes two classes:
 
 ## Files in the Repository
 - **`requirements.txt`**: List of dependencies required to run the project.
-- **`detect_webcam.py`**: Code for real-time object detection using a webcam.
+- **`smocker_detection.py`**: Code for real-time object detection using a webcam.
 - **`detect_image.py`**: Code for object detection on static images.
 - **`best.pt`**: Fine-tuned YOLO11n model weights.
 
